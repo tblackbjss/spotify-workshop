@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>{% block title %}{% endblock %} - BJSS API Workshop</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="/artists/search" class="btn-home"><i class="fas fa-home"></i> Home</a>
+      <a href="#" class="btn-search" id="toggle_search_button"><i class="fas fa-search"></i> Search Artist</a>
+    </div>
+    <div class="main-content">
+      <div id="content">{% block content %}{% endblock %}</div>
+    </div>
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2024 by <a class="a-company-link" href="https://www.bjss.com/">bjss</a>.
+      {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #e6e9ef
+}
+
+.a-company-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.a-artist,
+.a-album,
+.a-tracks {
+  color: #041e42;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+	width: 250px;
+	height: 100vh;
+	float: left;
+	background-color: #041e42;
+	padding: 30px;
+}
+
+.main-content {
+  margin-left: 310px;
+  padding: 20px 30px;
+  border-left: 1px solid #ddd;
+  background-color: #e6e9ef;
+  color: #041e42;
+}
+
+h1 {
+  color: #041e42;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #041e42;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#album_search_results,
+#search_results {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#album_search_results {
+  margin-left: 90px;
+}
+
+.btn-home,
+.btn-search {
+  display: block;
+  width: calc(100% - 15px);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #041e42;
+  color: #dad4d4;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 20px; 
+}
+
+.btn-home:hover,
+.btn-search:hover {
+  color: #fff;
+}
+
+.btn-home i,
+.btn-search i {
+  margin-right: 5px;
+  margin-right: 8px;
+}
+
+#search_box {
+	text-align: center;
+}
+
+.search-title {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.search-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-label {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.search-input {
+	width: 300px;
+	padding: 10px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.search-button {
+	padding: 10px 20px;
+	background-color: #041e42;
+	color: #dad4d4;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	}
+
+.search-button:hover {
+  color: #fff;
+}
+
+.artist-box, .album-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  text-align: left;
+  width: 400px;
+  transition: box-shadow 0.3s ease;
+}
+
+.album-box {
+  width: 600px;
+}
+.artist-box:hover, .album-box:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.45);
+}
+
+.artist-image, .album-image {
+  width: 160px;
+  height: 160px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.artist-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.artist-details, .album-details {
+  flex-grow: 1;
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.album-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+#artist_details,
+#album_details {
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+#artist_details {
+  width: 40%;
+}
+
+#artist_details h2,
+#album_details h2 {
+  color: #041e42;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#artist_details img,
+#album_details img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,10);
+}
+
+#album_details ul {
+  list-style: none;
+  padding: 0;
+}
+
+#album_details li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.artist-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 3;
+	width: 15%;
+	background-color: #041e42;
+	padding: 10px;
+  color: #fff;
+	text-align: center;
+  }

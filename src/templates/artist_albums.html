@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Album Results{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+{% if album_results %}
+<h1>{{ album_results.total }} albums found</h1>
+  <div id="album_search_results">
+      {% for item in album_results.album_items %}
+        <div class="album-box">
+          <div class="album-image">
+            {% if item.images %}
+              {% for image in item.images %}
+                {% if image.height == 300 %}
+                  <img src="{{ image.url }}" alt="{{ item.name }} image">
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="album-details">
+            <h3>{{ item.name }}</h3>
+            <p>Release date: {{ item.release_date }}</p>
+            <p>Total tracks: {{ item.total_tracks }}</p>
+            <a class="a-tracks" href="#" target=”_blank”>See Tracks</a>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

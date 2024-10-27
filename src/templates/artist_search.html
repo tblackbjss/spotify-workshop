@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}Artist Results{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div id="search_box" style="display: none;">
+  <h1 class="search-title">Search Artist</h1>
+  <form method="post" action="{{ url_for('search_artist') }}">
+    <div class="search-form">
+      <label for="artist_name" class="search-label">Artist name:</label>
+      {% if artist_name %}
+        <input type="text" id="artist_name" name="artist_name" value="{{ artist_name }}" class="search-input" required>
+      {% else %}
+        <input type="text" id="artist_name" name="artist_name" class="search-input" required>
+      {% endif %}
+      <button type="submit" class="search-button">Search</button>
+    </div>
+  </form>
+</div>
+{% if artist_name and search_results %}
+<h2>{{ search_results.artists.total }} results found for {{ artist_name }}</h2>
+  <div id="search_results">
+      {% for item in search_results.artists.result_items %}
+        <div class="artist-box">
+          <div class="artist-image">
+            {% if item.images %}
+              {% for image in item.images %}
+                {% if image.height == 160 %}
+                  <img src="{{ image.url }}" alt="{{ item.name }} image">
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="artist-details">
+            <h3 class="artist-name">{{ item.name }}</h3>
+            <p>Followers: {{ item.followers.total }}</p>
+            <p>Popularity: {{ item.popularity }}</p>
+            <a class="a-album" href="{{ url_for('display_artist_albums', artist_id=item.id) }}" target="_blank">See Albums</a>
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}
