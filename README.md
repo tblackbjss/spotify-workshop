@@ -70,17 +70,8 @@ Copy `example.env` to `.env` and add in the actual values of the id and secret t
 
 See https://developer.spotify.com/documentation/web-api for the Spotify API documentation.
 
-## How to use the Postman Collection
-
-- In Postman, create a new private Workspace
-- Click on Import, select the Spotify API.postman_collection.json file
-- Create a new environment called "Spotify Tests"
-- Update the Body of "01 Request Access Token" with valid credentials (client_id and client_secret)
-- Run "01 Request Access Token" to authenticate first, it will automatically save the authentication token in environment
-
 ## What do we start with?
 We have:
-- Postman set up with the Spotify API, to experiment with queries without having to write code
 - A template web server written in Python + Flask, which has enough code to query artists
 
 The template server consists of the following:
