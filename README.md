@@ -38,6 +38,7 @@ Install Flask and Requests, which are extra tools we need to run our project
 ```
 pip install flask
 pip install requests
+pip install python-dotenv
 ```
 
 ### If the "Start virtual environment" bit didn't work
